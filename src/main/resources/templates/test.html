@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--<script src="../lib/codemirror.js"></script>-->
+    <!--<link rel="stylesheet" href="../lib/codemirror.css">-->
+    <!--<script src="mode/javascript/javascript.js"></script>-->
+</head>
+<body>
+<p th:text="'Hello, ' + ${name} + '!'"/>
+<div>
+    <textarea id="textSource" name="textSource" rows="5" style="display: none;">Source...</textarea>
+    <textarea id="textModel" name="textModel" rows="5" style="display: none;">Model...</textarea>
+    <textarea id="textResult" name="textResult" rows="5" style="display: none;">Result...</textarea>
+    <!-- Create a simple CodeMirror instance -->
+    <link rel="stylesheet" href="/lib/codemirror.css"/>
+    <script src="/lib/codemirror.js"/>
+    <script>
+      var editorSource = CodeMirror.fromTextArea(textSource, {
+        lineNumbers: true
+      });
+      var editorModel = CodeMirror.fromTextArea(textModel, {
+        lineNumbers: true
+      });
+      var editorModel = CodeMirror.fromTextArea(textResult, {
+        lineNumbers: true
+      });
+
+    </script>
+</div>
+</body>
+</html>
